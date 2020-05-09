@@ -8,7 +8,11 @@ import { ActivityScreenComponent } from './screens/activity-screen/activity-scre
 
 
 @NgModule({
-  declarations: [ActivityComponent, StartActivityScreenComponent, ActivityScreenComponent],
+  declarations: [
+    ActivityComponent,
+    StartActivityScreenComponent,
+    ActivityScreenComponent
+  ],
   imports: [
     CommonModule,
     ActivityRoutingModule
