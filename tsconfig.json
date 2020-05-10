@@ -14,7 +14,19 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@core/*": ["src/app/Core/core/*"],
+      "@providers/*": ["src/app/Core/core/providers/*"],
+      "@models/*": ["src/app/Core/models/*"],
+      "@services/*": ["src/app/Core/services/*"],
+      "@shared/*": ["src/app/Core/shared/*"],
+      "@validators/*": ["src/app/Core/validators/*"],
+      "@activity/*": ["src/app/Student/activity/*"],
+      "@student/*": ["src/app/Student/student/*"],
+      "@workshop/*": ["src/app/Student/workshop/*"],
+      "@visitor/*": ["src/app/Visitor/visitor/*"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
