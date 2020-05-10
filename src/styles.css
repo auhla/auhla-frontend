@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.font-brand {
+  font-family: 'Righteous', cursive;  
+}
+
+.bg-float {
+  background-color: #303030 !important;
+}
+
+.bg-canvas {
+  background-color: #0000005c;
+}
+
+.bg-brand {
+  background-color: #9c27b0 !important;
+}
+
+.bg-brand-secondary {
+  background-color: #69f0ae !important;
+}
+
+.text-brand-secondary {
+  color: #69f0ae !important;
+}
+
+
+.btn-outline-brand {
+  color: #69f0ae!important;
+  border-color: #69f0ae!important;
+}
+
+.btn-outline-brand:hover {
+  color: black!important;
+  background-color: #69f0ae!important;
+  border-color: #69f0ae!important;
+}
