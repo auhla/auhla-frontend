@@ -1,0 +1,40 @@
+<div class="card border-dark shadow">
+  <div class="card-header bg-brand-secondary">
+    <h2>🕹</h2>
+    <h4 class="card-title text-dark">Talleres</h4>
+  </div>
+
+  <div class="card-body p-0"
+    [style.height]="250 + 'px'"
+    [style.background]="'lightgray'"
+    [style.overflow-y]="'scroll'"
+  >
+  
+    <div class="accordion" id="accordionField"> 
+      <div class="card">
+        <div id="headingThree" class="card-header bg-dark text-white pointer collapsed show" data-toggle="collapse"
+          [attr.data-target]="'#collapseThree'" [attr.aria-controls]="'collapseThree'"
+        >
+          <p class="text-white mb-0">
+            Octavo Básico
+          </p>
+        </div>
+        <div id="collapseThree" class="collapse show" [attr.aria-labelledby]="'headingThree'" [attr.data-parent]="'#accordionField'">
+          
+          <div class="card-body p-1 shadow-sm text-center bg-secondary text-white">
+            <small>Biologia</small>
+          </div>
+      
+          <div class="card-footer p-0">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Unidad 2</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="card-footer bg-dark border-dark">
+  <button class="btn btn-outline-brand disabled" style="left: -40px;">Ver talleres</button>
+</div>
+</div>
