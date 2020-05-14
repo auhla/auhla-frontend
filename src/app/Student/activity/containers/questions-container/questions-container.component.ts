@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ActivityService } from '@core/providers/activity/activity.service';
 import { ActivatedRoute } from '@angular/router';
+import { ActivityProviderService } from '@core/providers/activity/activity-provider.service';
+import { Activity } from '@models/activity.model';
+
 
 @Component({
   selector: 'activity-questions-container',
@@ -13,18 +15,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class QuestionsContainerComponent implements OnInit {
 
-  public questions$: Observable<any>;
-  private activityId: string;
+  @Input() 
+  public activity: Activity;
+
+  public questions$: Observable<any[]>;
 
   constructor(
-    private activityService: ActivityService,
-    private activateRoute: ActivatedRoute
-  ){
-    this.activityId = this.activateRoute.snapshot.paramMap.get("id"); 
+    private activityProvider: ActivityProviderService,
+  ){ 
   }
-
+  
   ngOnInit(): void {
-    this.questions$ = this.activityService.getActivityQuestions(this.activityId);
+    this.questions$ = this.activityProvider.getActivityQuestions(this.activity.id);                      
   }
 
 }
