@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { ToastrModule } from 'ngx-toastr';
 
@@ -24,10 +25,12 @@ const toastrOptions = {
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ToastrModule.forRoot(toastrOptions)
   ],
   exports: [
-    ...components
+    ...components,
+    ToastrModule,
   ]
 })
 export class SharedModule { }
