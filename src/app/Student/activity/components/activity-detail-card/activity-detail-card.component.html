@@ -1,0 +1,36 @@
+<div class="card bg-light">
+  <div class="card-header text-center bg-dark">
+    <button class="btn btn-primary float-right"
+      [routerLink]="[ '/student/activity/in-progress' ]"
+    >Iniciar <i class="fas fa-play-circle"></i></button>
+    <h4 class="card-title text-white">{{activity.name | titlecase}}</h4>
+  </div>
+
+  <div class="card-body font-brand-secondary">
+    <p class="card-text lead mt-2 mb-3">{{activity.description}}</p>
+  </div>
+
+  <div class="card-footer bg-dark">
+   
+    <span class="badge badge-pill badge-primary text-center mx-1 mt-1">
+      <h5 class="mx-1 mt-1">Intentos restantes: 1</h5>
+    </span>
+    <span class="badge badge-pill badge-primary text-center mx-1 mt-1">
+      <h5 class="mx-1 mt-1">Progreso: 0%</h5>
+    </span>
+    <span class="badge badge-pill badge-success text-center mx-1 mt-1">
+      <h5 class="mx-1 mt-1">Asignatura: {{activity.subject}}</h5>
+    </span>
+    <span class="badge badge-pill badge-success text-center mx-1 mt-1">
+      <h5 class="mx-1 mt-1">Unidad: {{activity.unit}}</h5>
+    </span>
+    <span class="badge badge-pill badge-info text-center mx-1 mt-1">
+      <h5 class="mx-1 mt-1">Curso: 8º</h5>
+    </span>
+    <span class="badge badge-pill badge-secondary text-center mx-1 mt-1"
+      *ngIf="activity.loot"
+    >
+      <h5 class="mx-1 mt-1">Botin: {{activity.loot}}💎</h5>
+    </span>
+  </div>
+</div> 
