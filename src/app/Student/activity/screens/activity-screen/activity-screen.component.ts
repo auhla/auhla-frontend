@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivityService } from '@activity/services/activity/activity.service';
+import { Observable } from 'rxjs';
+import { Activity } from '@models/activity.model';
 
 @Component({
   selector: 'app-activity-screen',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityScreenComponent implements OnInit {
 
-  constructor() { }
+  public activity$: Observable<Activity>;
+
+  constructor(private activityService: ActivityService) { }
 
   ngOnInit(): void {
-  }
+    this.activity$ = this.activityService.activity$;
+  }   
 
 }
