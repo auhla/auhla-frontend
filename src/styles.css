@@ -3,6 +3,10 @@
   font-family: 'Righteous', cursive;  
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .bg-float {
   background-color: #303030 !important;
 }
